@@ -1,0 +1,208 @@
+:root {
+  --font: "Open Sans", sans-serif;
+  --clr-primary: #db4c3f;
+  --clr-primary-light: #fafafa;
+  --clr-secondary: rgba(102, 102, 102, 0.1);
+  --clr-secondary-light: #e9ecef;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+  background-color: var(--clr-primary-light);
+  font-family: var(--font);
+}
+
+button {
+  font-size: 18px;
+  width: 100%;
+  padding: 5px 3px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+}
+
+input[type="text"] {
+  height: 35px;
+  padding: 6px 10px;
+  /* light grey */
+  border: 1px solid #d3d3d3;
+  /* white */
+  background-color: #fff;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+i {
+  margin-right: 10px;
+}
+
+/* Header */
+
+#btn-toggle-nav {
+  height: 35px;
+  width: 35px;
+  font-size: 25px;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 20px;
+  background-color: var(--clr-primary);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo i {
+  font-size: 25px;
+}
+
+/* Main */
+
+.main {
+  flex: 1;
+  display: flex;
+  height: 100%;
+}
+
+.nav {
+  width: 300px;
+  background-color: var(--clr-secondary-light);
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
+  gap: 10px;
+}
+
+.nav.active {
+  display: none;
+}
+
+.btn-default-list {
+  text-align: left;
+}
+
+/* Add list */
+
+.add-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 3px;
+  border-radius: 5px;
+}
+
+.btn-add-list {
+  width: 25px;
+  background-color: transparent;
+}
+
+.btn-default-list:hover,
+.add-list:hover {
+  background-color: var(--clr-secondary);
+}
+
+.btn-default-list.active,
+.add-list.active {
+  background-color: var(--clr-secondary);
+  font-weight: bold;
+}
+
+/* List view */
+
+#list-view {
+  flex: 1;
+  padding: 30px 20px;
+}
+
+/* Footer */
+
+.footer {
+  text-align: center;
+  padding: 10px;
+}
+
+/* Add list modal */
+
+.add-list-modal.active {
+  display: block;
+}
+
+.add-list-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(102, 102, 102, 0.5);
+}
+
+.add-list-modal-content {
+  width: 70%;
+  max-width: 350px;
+  padding: 20px;
+  margin: 20% auto;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border: 1px solid var(--clr-primary-light);
+  border-radius: 5px;
+  background-color: var(--clr-primary-light);
+}
+
+.add-list-modal-header h1 {
+  font-size: 20px;
+  padding: 0px 20px;
+}
+
+#form {
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.add-list-modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.add-list-modal-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+
+.btn-add-list-modal {
+  background-color: var(--clr-primary);
+}
+
+.btn-cancel-list-modal {
+  background-color: var(--clr-secondary);
+}
+
+.btn-cancel-list-modal:hover {
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
