@@ -42,18 +42,18 @@
       <nav class="nav active">
         <!-- Default lists -->
         <section class="default-lists">
-          <button class="btn-default-list">
+          <button class="btn-default-list" id="btn-inbox-list">
             <i class="fa-solid fa-inbox"></i>
             Inbox
           </button>
-          <button class="btn-default-list">
+          <button class="btn-default-list" id="btn-today-list">
             <i class="fa-solid fa-calendar-day"></i>
             Today
           </button>
-          <button class="btn-default-list">
+          <button class="btn-default-list" id="btn-tomorrow-list">
             <i class="fa-solid fa-circle-arrow-up"></i>Tomorrow
           </button>
-          <button class="btn-default-list">
+          <button class="btn-default-list" id="btn-thisweek-list">
             <i class="fa-solid fa-calendar-week"></i>
             This Week
           </button>
@@ -103,8 +103,16 @@
             />
           </div>
           <div class="add-list-modal-btns">
-            <button class="btn-cancel-list-modal">Cancel</button>
-            <button class="btn-add-list-modal">Add</button>
+            <button class="btn-cancel-list-modal" id="btn-cancel-list-modal">
+              Cancel
+            </button>
+            <button
+              disabled
+              class="btn-add-list-modal disabled"
+              id="btn-add-list-modal"
+            >
+              Add
+            </button>
           </div>
         </form>
       </section>

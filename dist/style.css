@@ -198,6 +198,10 @@ i {
   background-color: var(--clr-primary);
 }
 
+.btn-add-list-modal.disabled {
+  background-color: rgba(219, 76, 63, 0.5);
+}
+
 .btn-cancel-list-modal {
   background-color: var(--clr-secondary);
 }
